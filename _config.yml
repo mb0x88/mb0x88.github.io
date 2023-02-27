@@ -37,8 +37,8 @@ disqus:
 #facebook: myfacebook
 twitter: mb0x88
 #instagram: myinstagram
-linkedin: mylinkedin
-github: https://github.com/mb0x88
+linkedin: mb0x88
+github: mb0x88
 email: mb0x88@proton.me
 
 authors:
@@ -46,7 +46,7 @@ authors:
     name: Matt Bell
     bio: Hacker. Maker.
     external-image: false
-    picture: assets/images/bellm.jpg
+    picture: assets/images/bellm-square.jpg
     twitter: mb0x88
 
 
