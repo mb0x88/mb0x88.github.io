@@ -16,9 +16,9 @@ dark-theme: auto
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
-resume: false
-resume-external: true
-resume-url: https://google.com/?q=my+resume
+#resume: false
+#resume-external: true
+#resume-url: https://google.com/?q=my+resume
 
 url: https://mb0x88.github.io
 # your url: https://USERNAME.github.io
@@ -35,25 +35,20 @@ disqus:
 
 # if you don't have any of social below, comment the line
 #facebook: myfacebook
-twitter: mytwitter
+twitter: mb0x88
 #instagram: myinstagram
 linkedin: mylinkedin
-github: mygithub
-email: myemail@gmail.com
+github: https://github.com/mb0x88
+email: mb0x88@proton.me
 
 authors:
   johndoe:
-    name: John Doe
-    bio: A Man who travels the world eating noodles
+    name: Matt Bell
+    bio: Hacker. Maker.
     external-image: false
-    picture: assets/images/profile.jpg
-    twitter: johndoe
-  jamesfoster:
-    name: James Foster
-    bio: A Man who develops software with coffee
-    external-image: false
-    picture: assets/images/james.jpg
-    twitter: jamesfoster
+    picture: assets/images/bellm.jpg
+    twitter: mb0x88
+
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
