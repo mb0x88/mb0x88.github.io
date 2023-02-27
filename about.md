@@ -4,36 +4,27 @@ layout: page
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
-<p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>I am moving into the technology sector and I am looking forward to applying my creative background into the technology world. 
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+As a composer and music producer I have worked with EMI and Universal Music working on a range of production music albums. Some of my work has been featured on Netflix(Meat-eater Series). I also have performed professionally in the past, some of the highlights include being on the bill with - The Basics, Claudio, Husky, The Black Sorrows, Bag Raiders, Yo La Tengo and, once, Bon Jovi. I also had an endorsement with Lakland basses.
+
+In my spare time I love doing woodworking, gardening and hiking in the woods.</p>
 
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>HTML - Jade - Haml - Erb</li>
-	<li>Responsive (Mobile First)</li>
-	<li>CSS (Stylus, Sass, Less)</li>
-	<li>Css Frameworks (Bootstrap, Foundation)</li>
-	<li>Javascript (Design Patterns, Testes)</li>
-	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
+	<li>HTML & CSS</li>
+	<li>Linux</li>
 	<li>Git</li>
-	<li>PHP</li>
-	<li>Python</li>
-	<li>MySQL - MongoDB</li>
-	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
+	<li>Scrum & Kanban, Agile</li>
+</ul>
+
+<h2>Strengths</h2>
+
+<ul class="strength-list">
+	<li>Prudence</li>
+	<li>Creative Problem Solving</li>
+	<liInitiator</li>
 </ul>
 
 <h2>Projects</h2>
