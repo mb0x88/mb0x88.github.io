@@ -1,0 +1,21 @@
+---
+title: "Urbit Christchurch Meetup #2"
+layout: post
+date: 2016-02-28 22:48
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- markdown
+- components
+- extra
+category: blog
+author: mattbell
+description: Urbit Christchurch Meetup #2
+---
+
+
+The second Urbit meeting I'm hosting is this Saturday.  Get your free tickets here to learn about Urbit - a decentralised networked Operating System.
+
+
+Grab tickets [Here](https://www.eventbrite.com/e/urbit-christchurch-tickets-444362449047)
+
