@@ -1,5 +1,5 @@
 ---
-title: "Market Type Trading Indictaor"
+title: "Market Type Trading Indicator"
 layout: post
 date: 2023-01-23 22:10
 tag: jekyll
