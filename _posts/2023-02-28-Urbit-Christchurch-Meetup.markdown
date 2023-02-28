@@ -5,9 +5,8 @@ date: 2023-02-28 22:48
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
-- markdown
-- components
-- extra
+- open-source
+- urbit
 category: blog
 author: mattbell
 description: Urbit Christchurch Meetup #2
