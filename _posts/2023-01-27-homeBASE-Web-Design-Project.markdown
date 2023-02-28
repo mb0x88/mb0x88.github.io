@@ -3,7 +3,7 @@ title: "homeBASE - Web Design Project"
 layout: post
 date: 2023-01-27 22:10
 tag: jekyll
-image: /assets/images/homebase-1.jpg
+image: /assets/images/homebase.jpg
 headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
