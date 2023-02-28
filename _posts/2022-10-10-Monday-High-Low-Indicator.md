@@ -29,20 +29,16 @@ Here is an indicator I built that displays the Monday high and low for the week.
 
 
 
-// Description:  plot lines onto Monday High/Low
-
 //@version=4
 study(title="Monday High + Low", overlay=true)
 show_labels_1 = input(true,title="Show Monday Range Label?")
 show_lines_1 = input(true,title="Show Monday Range Lines?")
 show_prev = input(false, title="Show Previous Monday Range?")
 show_current = input(true, title="Show Current Monday Range?")
-res1 = "D"// input (type=input.resolution, defval="D", title="Open TF 1")
-res1_ago = 0 //input (defval=1)
-//displaced_space1 = input(defval="                                                                                                                                                        ", title="Spacing")
+res1 = "D"
+res1_ago = 0 
 
-//user_color = input(title="Color", defval="black", options=["aqua", "black", "blue", "fuchsia", "gray", "green", "lime", "maroon", "navy", "olive", "orange", "purple", "red", "silver", "teal", "white", "yellow"]) 
-//final_color = user_color == "aqua" ? color.aqua : user_color == "black" ? color.black : user_color == "blue" ? color.blue : user_color == "fuchsia" ? color.fuchsia : user_color == "gray" ? color.gray : user_color == "green" ? color.green : user_color == "lime" ? color.lime : user_color == "maroon" ? color.maroon : user_color == "navy" ? color.navy : user_color == "olive" ? color.olive : user_color == "orange" ? color.orange : user_color == "purple" ? color.purple : user_color == "red" ? color.red : user_color == "silver" ? color.silver : user_color == "teal" ? color.teal : user_color == "white" ? color.white : user_color == "yellow" ? color.yellow : color.black
+color.fuchsia : user_color == "gray" ? color.gray : user_color == "green" ? color.green : user_color == "lime" ? color.lime : user_color == "maroon" ? color.maroon : user_color == "navy" ? color.navy : user_color == "olive" ? color.olive : user_color == "orange" ? color.orange : user_color == "purple" ? color.purple : user_color == "red" ? color.red : user_color == "silver" ? color.silver : user_color == "teal" ? color.teal : user_color == "white" ? color.white : user_color == "yellow" ? color.yellow : color.black
 
 color mondayrange = input(color.blue, "Monday Range", type = input.color)
 color prevmondayrange = input(color.fuchsia, "Previous Monday Range", type = input.color)
@@ -64,10 +60,7 @@ is_newbar(res) =>
     
 firstcandle=is_newbar("D") and is_newbar("W")
 
-//plotshape(firstcandle)
 
-
-//fctime=time[firstcandle]
 
 var countD = 0
 countD := is_newbar("W") ? 1 : is_newbar("D") ? countD + 1 : countD
@@ -94,9 +87,7 @@ if firstcandlestart
     
 
 isfirstcandle=timenow <= tcandlestart
-//plotshape(isfirstcandle)
-//plot(tcandle)
-//plot(tcandlestart,color=color.red)
+
     
 
 time2= security(syminfo.ticker, "D", time[6], lookahead=barmerge.lookahead_on)
@@ -108,9 +99,7 @@ timeframe=timeframe.isdaily
 is_monday = countD==1
 is_notmonday = countD!=1
 
-//plotshape(is_monday)
-//plotshape(is_notmonday,color=color.red,location=location.belowbar)
-//plot(countD)
+
 
 float res1_price_H = 0.0 
 res1_price_H := is_monday ? security(syminfo.prefix+":"+ syminfo.ticker, res1, high[res1_ago], lookahead=barmerge.lookahead_on) : res1_price_H[1]
@@ -137,10 +126,6 @@ string text_HL_prev = "m mid: "+ tostring(res1_price_HL_prev)
 
 isnotMonday=countD==2 or countD==3 or countD==4 or countD==5 or countD==6 or countD==7
 
-//plotshape(new and thisweek and is_monday)
-
-//and isnotMonday()
-//bool drawBar = barstate.islast and isnotMonday
 
 
 
@@ -159,8 +144,7 @@ if (is_monday and show_labels_1 and show_current and timeframe.isintraday)
         label.delete(l3[0]) 
 
 
-//plotshape(isfirstcandle)
-//plotshape(isnotMonday)
+
 
 
 if is_monday and show_lines_1 and show_current and timeframe.isintraday
@@ -180,16 +164,13 @@ if is_monday and show_lines_1 and show_current and timeframe.isintraday
 if is_monday and show_lines_1 and isfirstcandle and timeframe.isintraday
     line line_11 = line.new(tAtx, res1_price_H_prev, time +60*60*24, res1_price_H_prev, xloc=xloc.bar_time, extend=extend.right,style=line.style_dashed,color=prevmondayrange, width=2)
     line.delete(line_11[1])
-//    if isfirstcandle!=true
-//        line.delete(line_11[0])
+
     line line_22 = line.new(tAtx, res1_price_L_prev, time +60*60*24, res1_price_L_prev, xloc=xloc.bar_time, extend=extend.right, style=line.style_dashed,color=prevmondayrange, width=2)
     line.delete(line_22[1])
-//    if isfirstcandle!=true
-//        line.delete(line_22[0])
+
     line line_33 = line.new(tAtx, res1_price_HL_prev, time +60*60*24, res1_price_HL_prev, xloc=xloc.bar_time, extend=extend.right, style=line.style_dotted,color=prevmondayrange, width=2)
     line.delete(line_33[1])  
-//    if isfirstcandle!=true
-//        line.delete(line_33[0])
+
 
 
 if (is_monday and show_labels_1 and isfirstcandle and timeframe.isintraday)
@@ -209,12 +190,10 @@ if (is_monday and show_labels_1 and isfirstcandle and timeframe.isintraday)
 if is_monday and show_lines_1 and show_prev and timeframe.isintraday
     line line_11 = line.new(tAtx, res1_price_H_prev, time +60*60*24, res1_price_H_prev, xloc=xloc.bar_time, extend=extend.right,style=line.style_dashed,color=prevmondayrange, width=2)
     line.delete(line_11[1])
-//    if isfirstcandle!=true
-//        line.delete(line_11[0])
+
     line line_22 = line.new(tAtx, res1_price_L_prev, time +60*60*24, res1_price_L_prev, xloc=xloc.bar_time, extend=extend.right, style=line.style_dashed,color=prevmondayrange, width=2)
     line.delete(line_22[1])
-//    if isfirstcandle!=true
-//        line.delete(line_22[0])
+
     line line_33 = line.new(tAtx, res1_price_HL_prev, time +60*60*24, res1_price_HL_prev, xloc=xloc.bar_time, extend=extend.right, style=line.style_dotted,color=prevmondayrange, width=2)
     line.delete(line_33[1])  
 {% endhighlight %}
