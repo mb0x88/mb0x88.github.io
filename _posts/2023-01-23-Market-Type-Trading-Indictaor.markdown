@@ -3,7 +3,7 @@ title: "Market Type Trading Indictaor"
 layout: post
 date: 2023-01-23 22:10
 tag: jekyll
-image: assets/images/market-type.png
+image: [assets/images/market-type.png](https://github.com/mb0x88/mb0x88.github.io/blob/gh-pages/assets/images/market-type.png)
 headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
@@ -13,7 +13,7 @@ author: mattbell
 externalLink: false
 ---
 
-![Screenshot](assets/images/market-type.png)
+![Screenshot]([assets/images/market-type.png](https://github.com/mb0x88/mb0x88.github.io/blob/gh-pages/assets/images/market-type.png))
 
 I was a big fan of [Van K Tharp](https://www.vantharp.com).  He talks in his books about defining a market type, so I built a indicator on Tradingview.
 
