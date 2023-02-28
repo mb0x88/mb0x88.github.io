@@ -2,7 +2,7 @@
 title: "Monday Highh & Low Indicator"
 layout: post
 date: 2022-10-10 22:10
-tag: jekyll
+tag: pinescript coding financial-analysis
 image: /assets/images/monday.png
 headerImage: true
 projects: true
