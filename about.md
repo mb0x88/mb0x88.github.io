@@ -8,7 +8,7 @@ layout: page
 
 Greetings!
 
-I'm Matt. I call myself a hacker & maker. Why? I love breaking things and making things. I'm interested in technology, particularly the type that makes humans more free, sovereign and secure. I love open source software and Linux. I am am currently learning hacking, coding and web development. My background was in the creative industries - music & film. I still dabble in that area now and again.
+I'm Matt. I call myself a hacker & maker. Why? I love breaking things and making things. I'm interested in technology, particularly the type that makes humans more free, sovereign and secure. I love open source software and Linux. I am currently learning hacking, coding and web development. My background was in the creative industries - music & film. I still dabble in that area now and again.
 
 As a composer and music producer I have worked with EMI and Universal Music working on a range of production music albums. Some of my work has been featured on Netflix(Meat-eater Series) and produced a viral song for the game "Piggy". I also have performed professionally in the past, some of the highlights include being on the bill with - Bag Raiders, Yo La Tengo and, once, Bon Jovi. I also had an endorsement with Chicago based instrument manufacturer Lakland basses.
 
