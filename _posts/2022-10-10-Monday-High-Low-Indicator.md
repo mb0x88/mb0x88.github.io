@@ -1,5 +1,5 @@
 ---
-title: "Market Type Trading Indicator"
+title: "Monday Highh & Low Indicator"
 layout: post
 date: 2022-10-10 22:10
 tag: jekyll
@@ -7,7 +7,7 @@ image: /assets/images/monday.png
 headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
-description: "Market Type Indicator"
+description: "Monday Highh & Low Indicator"
 category: project
 author: mattbell
 externalLink: false
