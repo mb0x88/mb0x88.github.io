@@ -1,7 +1,7 @@
 ---
 title: "Urbit Christchurch Meetup #2"
 layout: post
-date: 2013-02-28 22:48
+date: 2023-02-28 22:48
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
