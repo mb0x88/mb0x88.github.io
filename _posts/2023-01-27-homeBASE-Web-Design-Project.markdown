@@ -15,7 +15,7 @@ externalLink: false
 
 ![Screenshot](/assets/images/homebase.jpg)
 
-I recently completed the [REA](https://www.vantharp.com) accerated pathway program.  One of the projjects we had to work on was creating a website for a startup using softr.io.
+I recently completed the [REA](https://www.vantharp.com) accerated pathway program.  One of the projects we had to work on was creating a website for a startup using softr.io.
 
 
 ![Screenshot](/assets/images/homebase-1.jpg)
