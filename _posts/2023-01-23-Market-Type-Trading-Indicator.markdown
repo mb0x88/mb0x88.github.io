@@ -2,7 +2,10 @@
 title: "Market Type Trading Indicator"
 layout: post
 date: 2023-01-23 22:10
-tag: pinescript financial-analysis coding
+tag: 
+- pinescript 
+- financial-analysis 
+- coding
 image: /assets/images/market-type.png
 headerImage: true
 projects: true
