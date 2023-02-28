@@ -1,8 +1,11 @@
 ---
-title: "Monday Highh & Low Indicator"
+title: "Monday High & Low Indicator"
 layout: post
 date: 2022-10-10 22:10
-tag: pinescript coding financial-analysis
+tag: 
+- pinescript 
+- coding 
+- financial-analysis
 image: /assets/images/monday.png
 headerImage: true
 projects: true
