@@ -2,7 +2,8 @@
 title: "Viral Piggy"
 layout: project
 date: 2022-11-11 22:10
-tag: jekyll
+tag:
+- music
 image: /assets/images/market-type.png
 headerImage: true
 projects: true
@@ -12,6 +13,8 @@ category: project
 author: mattbell
 externalLink: false
 ---
+
+Here is a very sucessful song we produced for Sony/EMI Production Music libraries.  One of their highest streamed songs of all time! Enjoy!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WZi2tsv9Oj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
