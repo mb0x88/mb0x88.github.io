@@ -5,7 +5,7 @@ date: 2023-02-28 22:48
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
-- open-source
+- open source
 - urbit
 category: blog
 author: mattbell
