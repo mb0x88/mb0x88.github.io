@@ -30,13 +30,11 @@ What has inside?
 ---
 
 {% highlight js %}
-// Sticky Header
+
 //@version=4
 study(title="Market Type", shorttitle="Market Type", overlay=false)
 
-//resclose=security(syminfo.tickerid, res, close, lookahead=false)
-//Dprinosc = resclose / resclose[1] - 1
-//
+
 Period = input(100, minval=5, title="SQN Period")
 contracts = input(100, minval=0, type=input.float,title="Contracts")
 account = input(60000, minval=100, type=input.float,title="Account Value")
@@ -44,7 +42,6 @@ account = input(60000, minval=100, type=input.float,title="Account Value")
 
 
 period = input(title = "Display Period", type=input.string, defval="Current", options = ['Day', 'Week', 'Month', 'Current'])
-//period = input(title = "Display Period", type=input.string, defval="Current", options = ['Current'])
 
 
 res1 = period == 'Day' ? 'D' : period == 'Week' ? 'W' : period == 'Month' ? 'M' : period == 'Current' ? timeframe.period : 'D'
@@ -58,14 +55,12 @@ sqnperiodm=bar_indexm<100 and bar_indexm>1?bar_indexm:Period
 
 
 
-//plot(bar_indexm)
-//
-//
+
 
 
 Dprinos = tfclose / tfclose[1] - 1
 
-//xx = f_secureSecurity(syminfo.tickerid, "D", _Dprinos)
+
 
 dailyclose = security(syminfo.tickerid, "D", close,barmerge.lookahead_off)
 weeklyclose = security(syminfo.tickerid, "W", close,barmerge.lookahead_off)
@@ -102,7 +97,7 @@ SQNd = Dprosjekdd * sqrt(Period) / Stdevdd
 cd = SQNd > 0.75 and SQNd <= 1.47 ? color.lime : 
    SQNd > -0.7 and SQNd < 0 ? color.red : SQNd > 1.47 ? color.green : 
    SQNd <= -0.7 ? color.maroon : SQNd >= 0 and SQNd <= 0.75 ? color.gray : na
-//plot(SQNd, title="SQNd", color=cd, transp=60, histbase=0, style=plot.style_area, linewidth=1)
+
 
 
 
@@ -118,21 +113,21 @@ SQNw = Dprosjekww * sqrt(Period) / Stdevww
 cw = SQNw > 0.75 and SQNw <= 1.47 ? color.lime : 
    SQNw > -0.7 and SQNw < 0 ? color.red : SQNw > 1.47 ? color.green : 
    SQNw <= -0.7 ? color.maroon : SQNw >= 0 and SQNw <= 0.75 ? color.gray : na
-//plot(SQNw, title="SQNw", color=cw, transp=60, histbase=0, style=plot.style_area, linewidth=1)
 
-//plot(bar_index)
+
+
 
 Stdevm = stdev(Dprinosm, sqnperiodm)
 Stdevmm = security(syminfo.tickerid, "M", Stdevm,barmerge.lookahead_off)
 Dprosjekm = sma(Dprinosm, sqnperiodm)
 Dprosjekmm = security(syminfo.tickerid, "M", Dprosjekm,barmerge.lookahead_off)
 
-//plot(sqnperiodm)
+
 SQNm = Dprosjekmm * sqrt(sqnperiodm) / Stdevmm
 cm = SQNm > 0.7 and SQNm <= 1.47 ? color.lime : 
    SQNm > -0.7 and SQNm < 0 ? color.red : SQNm > 1.47 ? color.green : 
    SQNm <= -0.7 ? color.maroon : SQNm >= 0 and SQNm <= 0.75 ? color.gray : na
-//plot(SQNm, title="SQNm", color=cm, transp=60, histbase=0, style=plot.style_area, linewidth=1)
+
 
 length = input(10, minval=1)
 
@@ -142,7 +137,7 @@ per = timeframe.isintraday or timeframe.isdaily and timeframe.multiplier == 1 ? 
 hv = 100 * stdev(log(close / close[1]), length) * sqrt(annual / per)
 hv2 = 100 * stdev(log(close / close[1]), length) * sqrt(annual / 7)
 
-//plot(hv, color=color.blue)
+
 pr=percentrank(hv,annual/per)
 pr2=percentrank(hv2,12)
 prw = security(syminfo.tickerid, "W", pr, lookahead=true)
@@ -156,9 +151,7 @@ prz=(prd-50)/25
 przdisplay=(prx-50)/25
 
 plot(przdisplay,color=color.white)
-//plot(pr2_1,color=color.blue)
-//plot(pr3_1,color=color.purple)
-//plot(pr4_1,color=color.gray)
+
 
 h1 =hline(-2)
 h2 =hline(-1)
@@ -167,20 +160,14 @@ h4 =hline(1)
 h5 =hline(2)
 
 fill(h1,h2,color=prx<25?color.lime:na)
-//fill(h1,h2,color=color.gray)
+
 fill(h2,h3,color=prx>25 and prx<50?color.blue:na)
 fill(h3,h4,color=prx>50 and prx<75?color.purple:na)
 fill(h4,h5,color=prx>75?color.red:na)
 
-//var sqnz = na
-//SQN > 0.7 and SQN < 1.7?"bull":SQN > -0.7 and SQN < 0?"bear":SQN > 1.37?"strongbull":SQN < -0.7?"strongbear":SQN > 0 and SQN < 0.7 ?"neutral":na
-
-//var przz = na
-//prd<25?"quiet":prd>25 and prd<50?"normal":prd>50 and prd<75?"volatile":prd>75?"veryvolatile":na
 
 
 
-//
 string sqnfloatd = SQNd > 0.75 and SQNd < 1.47?" bull":SQNd > -0.7 and SQNd < 0?" bear":SQNd >= 1.47?" strong bull":SQNd <= -0.7?" strong bear":SQNd >= 0 and SQNd <= 0.75 ?" neutral":"[no data]"
 string hvfloatd = prd<=25?" quiet":prd>25 and prd<50?" normal":prd>50 and prd<75?" volatile":prd>=75?" very volatile":"[no data]"
 
@@ -203,7 +190,7 @@ string text3 = "                                                                
 string text4 = "                                                                     " + " simple:" + hvfloatdsimple + sqnfloatdsimple
 string text5 = "                                                                     " + " positon volatility: " + tostring(round(contractvol,2)) + "%"
 
-//
+
 bool drawBar = barstate.islast
 if (drawBar)
     label l1 = label.new(bar_index, 0.5, text1,  color=color.red, textcolor=color.black,  style=label.style_none,yloc=yloc.price,xloc = xloc.bar_index)
@@ -216,6 +203,5 @@ if (drawBar)
     label.delete(l4[1])
     label l5 = label.new(bar_index, 2, text5,  color=color.red, textcolor=color.black,  style=label.style_none,yloc=yloc.price,xloc = xloc.bar_index)
     label.delete(l5[1])
-//    label l5 = label.new(bar_index, -22, text5,  color=color.red, textcolor=color.black,  style=label.style_none,yloc=yloc.price)
-//
+
 {% endhighlight %}
